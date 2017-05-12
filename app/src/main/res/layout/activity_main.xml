@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.xianicai.meishe.MiniVideoActivity">
+
+    <com.meicam.sdk.NvsLiveWindow
+        android:id="@+id/liveWindow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <View
+        android:id="@+id/view_mini_tools"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#191B1D"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveWindow"/>
+
+    <ImageView
+        android:id="@+id/image_fill_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/btn_anchor_conference"
+        app:layout_constraintBottom_toBottomOf="@id/view_mini_tools"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/image_vide"
+        app:layout_constraintTop_toTopOf="@id/view_mini_tools"
+        />
+
+    <ImageView
+        android:id="@+id/image_vide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/btn_camera_switch"
+        app:layout_constraintBottom_toBottomOf="@id/view_mini_tools"
+        app:layout_constraintLeft_toRightOf="@+id/image_fill_light"
+        app:layout_constraintRight_toLeftOf="@+id/image_beauty"
+        app:layout_constraintTop_toTopOf="@id/view_mini_tools"/>
+
+    <ImageView
+        android:id="@+id/image_beauty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/live_beauty_on"
+        app:layout_constraintBottom_toBottomOf="@id/view_mini_tools"
+        app:layout_constraintLeft_toRightOf="@+id/image_vide"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_mini_tools"/>
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#1C1E20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_mini_tools"/>
+
+    <TextView
+        android:id="@+id/image_camera_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/icon_group_live_code"
+        android:text="开始"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_bottom"/>
+
+</android.support.constraint.ConstraintLayout>
+
